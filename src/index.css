@@ -1,1 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Monomakh&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shafarik&display=swap");
 @import "tailwindcss";
+
+@theme {
+  --font-primary: "Raleway", serif;
+  --font-secondary: "Roboto Mono", serif;
+  --color-primary: #101010;
+}
+
+@layer components {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+}
