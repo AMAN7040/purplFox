@@ -5,7 +5,7 @@ import Actions from "./Actions";
 
 const Navbar = () => {
   return (
-    <header>
+    <header className="text-primary font-secondary h-18 px-16 grid grid-cols-[250px_1fr_250px] items-center gap-4 text-sm border-b-1 border-gray-200 ">
       <Logo />
       <Navlinks />
       <Actions />
