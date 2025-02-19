@@ -1,0 +1,35 @@
+/* Overlay (Background) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 99;
+}
+
+/* Show overlay when sidebar is open */
+.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Sidebar */
+aside {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Slide in when open */
+.slideIn {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Slide out when closed */
+.slideOut {
+  transform: translateX(-100%);
+}
