@@ -1,8 +1,8 @@
 import React from "react";
 import { FiSearch, FiShoppingCart, FiUser } from "react-icons/fi";
 
-const Icon = ({ Iconcomponent, label, size = 22 }) => (
-  <div className="py-4 px-2 cursor-pointer">
+const Icon = ({ Iconcomponent, label, size = 22, hideOnSamll }) => (
+  <div className={`${hideOnSamll ? "max-lg:hidden min-lg:block" : ""}py-4 px-2 cursor-pointer`}>
     <Iconcomponent
       size={size}
       aria-label={label}
@@ -13,9 +13,9 @@ const Icon = ({ Iconcomponent, label, size = 22 }) => (
 
 const Actions = () => {
   const icons = [
-    { IconComponent: FiSearch, label: "Search" },
-    { IconComponent: FiUser, label: "User" },
-    { IconComponent: FiShoppingCart, label: "Shopping Cart" },
+    { IconComponent: FiSearch, label: "Search", hideOnSamll: false },
+    { IconComponent: FiUser, label: "User", hideOnSamll: true },
+    { IconComponent: FiShoppingCart, label: "Shopping Cart",  hideOnSamll: false },
   ];
 
   return (
@@ -25,6 +25,7 @@ const Actions = () => {
           key={icon?.IconComponent}
           Iconcomponent={icon?.IconComponent}
           label={icon?.label}
+          hideOnSamll={icon.hideOnSamll}
         />
       ))}
     </div>
