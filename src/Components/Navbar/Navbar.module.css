@@ -10,7 +10,9 @@ details[open] > .menu_link > svg {
   z-index: 1;
   opacity: 0;
   transform: translate3d(0, -20px, 0);
-  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition:
+    opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
   display: block;
   pointer-events: none;
   will-change: opacity, transform;
@@ -25,12 +27,26 @@ details[open] .about_dropdown {
 .sub_dropdownItem {
   opacity: 0;
   transform: translateY(-24px);
-  transition: opacity 0.2s cubic-bezier(0.5, 0, 0.1, 1) 0.1s,
+  transition:
+    opacity 0.2s cubic-bezier(0.5, 0, 0.1, 1) 0.1s,
     transform 0.2s cubic-bezier(0.5, 0, 0.1, 1) 0.1s;
   will-change: opacity, transform;
 }
 
 details[open] .sub_dropdownItem {
   opacity: 1;
+  transform: translateY(0);
+}
+
+.navbarSticky {
+  position: sticky;
+  top: 0;
+}
+
+.hidden {
+  transform: translateY(-100%);
+}
+
+.visible {
   transform: translateY(0);
 }

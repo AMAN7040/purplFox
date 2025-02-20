@@ -1,12 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "./Logo";
 import Navlinks from "./Navlinks";
 import Actions from "./Actions";
 import Hamburger from "./Hamburger";
+import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  const [prevScroll, setPrevScroll] = useState(0);
+  const [isSticky, setSticky] = useState(false);
+  const [isHidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setPrevScroll((prev) => {
+        const currentScroll = window.scrollY;
+
+        if (currentScroll > 118) {
+          setSticky(true);
+          setHidden(currentScroll > prev);
+        } else {
+          setSticky(false);
+          setHidden(false);
+        }
+
+        return currentScroll;
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="text-primary font-secondary text-sm border-b-1 border-gray-200 h-18 ">
+    <header
+      className={` text-primary font-secondary text-sm border-b-1 border-gray-200 h-18 relative z-4 transition-transform duration-300 ease-out ${isSticky ? styles.sticky : ""} ${isHidden ? styles.hidden : styles.visible}`}
+    >
       {/* Smaller Screens */}
       <nav className="flex px-7.5 py-2.5 lg:hidden text-primary font-secondary">
         <div className="flex items-center flex-grow">
