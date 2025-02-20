@@ -41,6 +41,9 @@ details[open] .sub_dropdownItem {
 .navbarSticky {
   position: sticky;
   top: 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
 }
 
 .hidden {
