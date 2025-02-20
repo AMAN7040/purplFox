@@ -5,7 +5,9 @@
   --font-primary: "Raleway", serif;
   --font-secondary: "Roboto Mono", serif;
   --color-primary: #101010;
+  --breakpoint-xs: 28.6875rem;
 }
+
 
 @layer components {
   .flex-center {
