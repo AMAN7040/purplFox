@@ -28,10 +28,10 @@ const Sidebar = ({ isSideBar, onClose }) => {
       <aside
         className={`${
           isSideBar ? styles.slideIn : styles.slideOut
-        } flex-col max-w-[480px] fixed w-full h-full top-0 left-0  z-100 border-r border-black flex-1 overflow-y-scroll bg-white`}
+        } fixed top-0 left-0 z-100 h-full w-full max-w-[480px] flex-1 flex-col overflow-y-scroll border-r border-black bg-white`}
       >
-        <div className="flex justify-between items-center py-5 pr-4 pl-6 border-b border-gray-200">
-          <h2 className=" text-primary font-secondary text-[17px]">Menu</h2>
+        <div className="flex items-center justify-between border-b border-gray-200 py-5 pr-4 pl-6">
+          <h2 className="font-secondary text-[17px] text-primary">Menu</h2>
           <button onClick={onClose} aria-label="Close Sidebar">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -50,8 +50,8 @@ const Sidebar = ({ isSideBar, onClose }) => {
             </svg>
           </button>
         </div>
-        <div className="z-5 py-3 px-2 border-b border-gray-200">
-          <nav className="text-primary font-primary">
+        <div className="z-5 border-b border-gray-200 px-2 py-3">
+          <nav className="font-primary text-primary">
             <ul className="flex-col justify-center">
               <NavItem
                 handleToggleOpen={handleToggleOpen}
@@ -62,14 +62,14 @@ const Sidebar = ({ isSideBar, onClose }) => {
           </nav>
         </div>
         <div>
-          <address className="contact-section pt-4 pb-8 mt-5 mb-2 px-6 border-b border-gray-200 not-italic">
-            <span className="font-primary text-primary inline-block mb-6 ">
+          <address className="contact-section mt-5 mb-2 border-b border-gray-200 px-6 pt-4 pb-8 not-italic">
+            <span className="mb-6 inline-block font-primary text-primary">
               Contact us
             </span>
             <div className="px-2">
               <a
                 href="mailto:admin@purpelfox.com"
-                className="flex justify-start gap-3 items-center decoration-0 text-inherit font-primary cursor-pointer"
+                className="flex cursor-pointer items-center justify-start gap-3 font-primary text-inherit decoration-0"
               >
                 <span className="">
                   <svg
@@ -99,19 +99,22 @@ const Sidebar = ({ isSideBar, onClose }) => {
               </a>
             </div>
           </address>
-          <div className="account-section pt-4 mt-4">
-            <div className="flex items-center mb-4 font-secondary text-primary gap-4 px-6">
+          <div className="account-section mt-4 pt-4">
+            <div className="mb-4 flex items-center gap-4 px-6 font-secondary text-primary">
               Your Account
-              <a aria-label="Login" className="underline underline-offset-4 cursor-pointer">
+              <a
+                aria-label="Login"
+                className="cursor-pointer underline underline-offset-4"
+              >
                 Login
               </a>
             </div>
 
-            <ul className="mt-6 px-6 flex flex-wrap">
+            <ul className="mt-6 flex flex-wrap px-6">
               <li className="flex-center">
                 <a
                   href="#"
-                  className="border-0 rounded-full text-white bg-black flex-center min-h-11 min-w-11 cursor-pointer"
+                  className="flex-center min-h-11 min-w-11 cursor-pointer rounded-full border-0 bg-black text-white"
                 >
                   <svg
                     width="21"

@@ -6,7 +6,7 @@ const Icon = ({ Iconcomponent, label, size = 22, hideOnSamll }) => (
   <div
     className={`${
       hideOnSamll ? "max-lg:hidden min-lg:block" : ""
-    }py-4 px-2 cursor-pointer`}
+    }py-4 cursor-pointer px-2`}
   >
     <Iconcomponent
       size={size}
@@ -28,7 +28,7 @@ const Actions = () => {
   ];
 
   return (
-    <div className="flex justify-end items-center space-x-6 font-secondary text-primary text-sm">
+    <div className="flex items-center justify-end space-x-6 font-secondary text-sm text-primary">
       {icons.map((icon) => (
         <Icon
           key={icon?.IconComponent}

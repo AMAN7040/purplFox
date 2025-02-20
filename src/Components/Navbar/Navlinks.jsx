@@ -5,7 +5,7 @@ const AboutUsComp = ({ handleToggleOpen, isOpen, position }) => {
   return (
     <details onClick={handleToggleOpen}>
       <summary
-        className={`${styles.menu_link} list-none grid grid-cols-[1fr_24px] gap-4 items-center outline-0`}
+        className={`${styles.menu_link} grid list-none grid-cols-[1fr_24px] items-center gap-4 outline-0`}
         aria-expanded={`${isOpen ? true : false}`}
         aria-controls="about-dropdown"
       >
@@ -34,10 +34,10 @@ const AboutUsComp = ({ handleToggleOpen, isOpen, position }) => {
         } py-3`}
         id="about-dropdownList"
       >
-        <li className={`${styles.sub_dropdownItem} px-5 py-3 cursor-pointer`}>
+        <li className={`${styles.sub_dropdownItem} cursor-pointer px-5 py-3`}>
           Our story
         </li>
-        <li className={`${styles.sub_dropdownItem} px-5 py-3 cursor-pointer`}>
+        <li className={`${styles.sub_dropdownItem} cursor-pointer px-5 py-3`}>
           Our Partners
         </li>
       </ul>
@@ -48,10 +48,10 @@ const AboutUsComp = ({ handleToggleOpen, isOpen, position }) => {
 const NavItem = ({ handleToggleOpen, isOpen, position }) => {
   return (
     <>
-      <li className="px-4 py-6 text-primary font-primary  cursor-pointer">
+      <li className="cursor-pointer px-4 py-6 font-primary text-primary">
         Home
       </li>
-      <li className="relative px-4 py-6 text-primary font-primary  cursor-pointer">
+      <li className="relative cursor-pointer px-4 py-6 font-primary text-primary">
         <AboutUsComp
           handleToggleOpen={handleToggleOpen}
           isOpen={isOpen}
@@ -70,8 +70,8 @@ const Navlinks = () => {
   };
 
   return (
-    <nav className="flex-1 w-full max-lg:hidden">
-      <ul className="flex list-none items-center h-full justify-center flex-wrap">
+    <nav className="w-full flex-1 max-lg:hidden">
+      <ul className="flex h-full list-none flex-wrap items-center justify-center">
         <NavItem
           handleToggleOpen={handleToggleOpen}
           isOpen={isOpen}

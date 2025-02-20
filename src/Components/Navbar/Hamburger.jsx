@@ -40,7 +40,7 @@ const Hamburger = () => {
       </button>
 
       {/* SideBar */}
-     <Sidebar isSideBar={isSideBar} onClose={handleClose} />
+      <Sidebar isSideBar={isSideBar} onClose={handleClose} />
     </div>
   );
 };

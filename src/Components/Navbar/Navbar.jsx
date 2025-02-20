@@ -6,10 +6,10 @@ import Hamburger from "./Hamburger";
 
 const Navbar = () => {
   return (
-    <header className="text-primary font-secondary text-sm border-b-1 border-gray-200 h-18 ">
+    <header className="h-18 border-b-1 border-gray-200 font-secondary text-sm text-primary">
       {/* Smaller Screens */}
-      <nav className="flex px-7.5 py-2.5 lg:hidden text-primary font-secondary">
-        <div className="flex items-center flex-grow">
+      <nav className="flex px-7.5 py-2.5 font-secondary text-primary lg:hidden">
+        <div className="flex flex-grow items-center">
           <Hamburger />
           <Logo />
         </div>
@@ -17,7 +17,7 @@ const Navbar = () => {
       </nav>
 
       {/* Larger screens */}
-      <nav className="hidden lg:grid grid-cols-[250px_1fr_250px] items-center gap-4 px-16">
+      <nav className="hidden grid-cols-[250px_1fr_250px] items-center gap-4 px-16 lg:grid">
         <Logo />
         <Navlinks />
         <Actions />
