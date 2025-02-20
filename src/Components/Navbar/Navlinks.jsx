@@ -29,7 +29,7 @@ const AboutUsComp = ({ handleToggleOpen, isOpen, position }) => {
       <ul
         className={`${
           styles.about_dropdown
-        } ${position} top-full left-0 w-75 list-none border ${
+        } ${position} top-full left-0 w-75 list-none border bg-white ${
           position === "absolute" ? "border-gray-200" : "border-white"
         } py-3`}
         id="about-dropdownList"
