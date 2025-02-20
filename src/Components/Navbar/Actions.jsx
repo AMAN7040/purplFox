@@ -1,12 +1,17 @@
 import React from "react";
-import { FiSearch, FiShoppingCart, FiUser } from "react-icons/fi";
+import { FiSearch, FiUser } from "react-icons/fi";
+import { HiOutlineShoppingBag } from "react-icons/hi";
 
 const Icon = ({ Iconcomponent, label, size = 22, hideOnSamll }) => (
-  <div className={`${hideOnSamll ? "max-lg:hidden min-lg:block" : ""}py-4 px-2 cursor-pointer`}>
+  <div
+    className={`${
+      hideOnSamll ? "max-lg:hidden min-lg:block" : ""
+    }py-4 px-2 cursor-pointer`}
+  >
     <Iconcomponent
       size={size}
       aria-label={label}
-      style={{ strokeWidth: 2.5 }}
+      style={{ strokeWidth: 2.3 }}
     />
   </div>
 );
@@ -15,7 +20,11 @@ const Actions = () => {
   const icons = [
     { IconComponent: FiSearch, label: "Search", hideOnSamll: false },
     { IconComponent: FiUser, label: "User", hideOnSamll: true },
-    { IconComponent: FiShoppingCart, label: "Shopping Cart",  hideOnSamll: false },
+    {
+      IconComponent: HiOutlineShoppingBag,
+      label: "Shopping Cart",
+      hideOnSamll: false,
+    },
   ];
 
   return (

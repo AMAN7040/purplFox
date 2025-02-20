@@ -62,7 +62,7 @@ const Sidebar = ({ isSideBar, onClose }) => {
           </nav>
         </div>
         <div>
-          <address className="contact-section pt-4 pb-8 mt-5 mb-2 px-6 border-b border-gray-200">
+          <address className="contact-section pt-4 pb-8 mt-5 mb-2 px-6 border-b border-gray-200 not-italic">
             <span className="font-primary text-primary inline-block mb-6 ">
               Contact us
             </span>
@@ -102,7 +102,7 @@ const Sidebar = ({ isSideBar, onClose }) => {
           <div className="account-section pt-4 mt-4">
             <div className="flex items-center mb-4 font-secondary text-primary gap-4 px-6">
               Your Account
-              <a aria-label="Login" className="underline cursor-pointer">
+              <a aria-label="Login" className="underline underline-offset-4 cursor-pointer">
                 Login
               </a>
             </div>
@@ -111,7 +111,7 @@ const Sidebar = ({ isSideBar, onClose }) => {
               <li className="flex-center">
                 <a
                   href="#"
-                  className="border-0 rounded-full text-white bg-black flex-center min-h-14 w-14 cursor-pointer"
+                  className="border-0 rounded-full text-white bg-black flex-center min-h-11 min-w-11 cursor-pointer"
                 >
                   <svg
                     width="21"
