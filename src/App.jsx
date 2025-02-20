@@ -1,10 +1,13 @@
 import "./App.css";
+import Announcement from "./Components/Announcement";
+
 import Navbar from "./Components/Navbar";
 
 function App() {
   return (
     <>
-     <Navbar/>
+      <Announcement />
+      <Navbar />
     </>
   );
 }
