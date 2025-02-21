@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
-import Sidebar from "../Sidebar/Sidebar";
 
-const Hamburger = () => {
-  const [isSideBar, setSideBar] = useState(false);
-
+const Hamburger = ({ setSideBar }) => {
   useEffect(() => {
     const handleKeyPress = (e) => {
       if (e.key === "Escape") {
@@ -13,11 +10,7 @@ const Hamburger = () => {
 
     document.addEventListener("keydown", handleKeyPress);
     return () => document.removeEventListener("keydown", handleKeyPress);
-  });
-
-  const handleClose = () => {
-    setSideBar(false); // Close the sidebar visually first
-  };
+  }, [setSideBar]);
 
   return (
     <div className="flex-center px-2 lg:hidden">
@@ -38,9 +31,6 @@ const Hamburger = () => {
           <line x1="3" y1="18" x2="21" y2="18" />
         </svg>
       </button>
-
-      {/* SideBar */}
-      <Sidebar isSideBar={isSideBar} onClose={handleClose} />
     </div>
   );
 };
