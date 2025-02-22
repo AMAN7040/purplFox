@@ -10,7 +10,7 @@ const Home = () => {
       <HeroSection_1 />
       <HeroSection_2 />
       <HeroSection_3 />
-      <HeroSection_4/>
+      <HeroSection_4 />
     </main>
   );
 };
