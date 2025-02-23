@@ -50,7 +50,7 @@ const HeroSection_5 = () => {
                     <div className="relative block aspect-2/3">
                       <img
                         src={image}
-                        className="object-[53.2952% 25.8676%] h-auto w-full object-cover transition-all duration-300 ease-in-out"
+                        className="object-[53.2952% 25.8676%] aspect-2/3 h-auto w-full object-cover transition-all duration-300 ease-in-out"
                       />
                     </div>
                   </div>
@@ -60,7 +60,7 @@ const HeroSection_5 = () => {
           </div>
           <div className="s-footer pt-[calc(var(--spacing)*4)] text-left">
             <a
-              className="inline-flex min-h-[44px] cursor-pointer items-center justify-center rounded-[50px] border-0 bg-black px-[24px] font-secondary font-light break-all text-white xs:min-h-[56px]"
+              className="inline-flex min-h-[44px] cursor-pointer items-center justify-center rounded-[50px] border-0 bg-black px-[24px] font-secondary text-[12px] font-light break-all text-white xs:min-h-[56px] xs:text-sm"
               href="#"
             >
               BUY NOW
