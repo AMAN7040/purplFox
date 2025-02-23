@@ -1,0 +1,32 @@
+.container7 {
+  --w-md: 8px;
+  width: calc(var(--grid-ratio, 100% / 12) * var(--w-xs));
+  max-width: calc(var(--grid-ratio, 100% / 12) * var(--w-xs));
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.hasAnimation {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0);
+}
+
+.fadeInDelayed {
+  animation: fadeInUp 0.6s ease 0.3s forwards;
+}
+
+@media (min-width: 768px) {
+  .container7 {
+    width: calc(var(--grid-ratio, 100% / 12) * var(--w-md));
+    max-width: calc(var(--grid-ratio, 100% / 12) * var(--w-md));
+  }
+}
