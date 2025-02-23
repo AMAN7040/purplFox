@@ -6,6 +6,7 @@ import HeroSection_4 from "../Components/BodySection/HeroSection_4";
 import HeroSection_5 from "../Components/BodySection/HeroSection_5";
 import HeroSection_6 from "../Components/BodySection/HeroSection_6";
 import HeroSection_7 from "../Components/BodySection/HeroSection_7";
+import HeroSection_8 from "../Components/BodySection/HeroSection_8";
 
 const Home = () => {
   return (
@@ -16,7 +17,8 @@ const Home = () => {
       <HeroSection_4 />
       <HeroSection_5 />
       <HeroSection_6 />
-      <HeroSection_7/>
+      <HeroSection_7 />
+      <HeroSection_8 />
     </main>
   );
 };
