@@ -113,7 +113,7 @@ const Sidebar = ({ isSideBar, onClose }) => {
             <ul className="mt-6 flex flex-wrap px-6">
               <li className="flex-center">
                 <a
-                  href="#"
+                  href="https://www.instagram.com/purplfox.in"
                   className="flex-center min-h-11 min-w-11 cursor-pointer rounded-full border-0 bg-black text-white"
                 >
                   <svg
