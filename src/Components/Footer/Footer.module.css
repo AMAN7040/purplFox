@@ -8,7 +8,7 @@
 }
 
 .cntr {
-  padding-inline: calc(var(--spacing) * 2.5);
+  padding-inline: calc(var(--spacing) * 3);
   margin: 0 auto;
   width: 100%;
 }
