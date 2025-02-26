@@ -1,7 +1,18 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../Cart/Cart.module.css";
 
 const Cart = ({ isCart, onClose }) => {
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (event.target.id === "overlay") {
+        onClose();
+      }
+    };
+
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, [onClose]);
+
   return (
     <div
       className={`${styles.overlay} ${isCart ? styles.show : ""} ${isCart ? "bg-black/55" : ""}`}
