@@ -6,6 +6,7 @@ import Hamburger from "./Hamburger";
 import styles from "./Navbar.module.css";
 import Sidebar from "../Sidebar/Sidebar";
 import Cart from "../Cart/Cart";
+import Search from "../Search/Search";
 
 const Navbar = () => {
   const prevScroll = useRef(0);
@@ -13,6 +14,7 @@ const Navbar = () => {
   const [isHidden, setHidden] = useState(false);
   const [isSideBar, setSideBar] = useState(false);
   const [isCart, setCart] = useState(false);
+  const [isSearch, setSearch] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +47,10 @@ const Navbar = () => {
     setCart(false);
   };
 
+  const handleCloseSearch = () => {
+    setSearch(false);
+  };
+
   return (
     <>
       <header
@@ -56,16 +62,17 @@ const Navbar = () => {
             <Hamburger setSideBar={setSideBar} />
             <Logo />
           </div>
-          <Actions setCart={setCart} />
+          <Actions setCart={setCart} setSearch={setSearch} />
         </nav>
 
         {/* Larger screens */}
         <nav className="hidden grid-cols-[250px_1fr_250px] items-center gap-4 px-16 lg:grid">
           <Logo />
           <Navlinks />
-          <Actions setCart={setCart} />
+          <Actions setCart={setCart} setSearch={setSearch} />
         </nav>
       </header>
+      <Search isSearch={isSearch} onClose={handleCloseSearch} />
       <Sidebar isSideBar={isSideBar} onClose={handleClose} />
       <Cart isCart={isCart} onClose={handleCloseCart} />
     </>

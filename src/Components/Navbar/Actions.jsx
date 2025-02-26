@@ -2,7 +2,14 @@ import React, { useEffect } from "react";
 import { FiSearch, FiUser } from "react-icons/fi";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 
-const Icon = ({ Iconcomponent, label, size = 22, hideOnSamll, setCart }) => (
+const Icon = ({
+  Iconcomponent,
+  label,
+  size = 22,
+  hideOnSamll,
+  setCart,
+  setSearch,
+}) => (
   <div
     className={`${
       hideOnSamll ? "max-lg:hidden min-lg:block" : ""
@@ -12,12 +19,19 @@ const Icon = ({ Iconcomponent, label, size = 22, hideOnSamll, setCart }) => (
       size={size}
       aria-label={label}
       style={{ strokeWidth: 2.3 }}
-      onClick={() => setCart(true)}
+      onClick={() => {
+        if (Iconcomponent === FiSearch) {
+          setSearch(true);
+        } else if (Iconcomponent === HiOutlineShoppingBag) {
+          setCart(true);
+        } else {
+        }
+      }}
     />
   </div>
 );
 
-const Actions = ({ setCart }) => {
+const Actions = ({ setCart, setSearch }) => {
   const icons = [
     { IconComponent: FiSearch, label: "Search", hideOnSamll: false },
     { IconComponent: FiUser, label: "User", hideOnSamll: true },
@@ -48,6 +62,7 @@ const Actions = ({ setCart }) => {
           label={icon?.label}
           hideOnSamll={icon.hideOnSamll}
           setCart={setCart}
+          setSearch={setSearch}
         />
       ))}
     </div>
