@@ -22,7 +22,7 @@ const Sidebar = ({ isSideBar, onClose }) => {
 
   return (
     <div
-      className={`${styles.overlay} ${isSideBar ? styles.show : ""}`}
+      className={`${styles.overlay} ${isSideBar ? styles.show : ""} ${isSideBar ? "bg-black/50" : ""}`}
       id="overlay"
     >
       <aside
