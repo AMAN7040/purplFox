@@ -6,7 +6,7 @@ const NewsLetterForm = () => {
       <div className="flex flex-col gap-[16px] sm:flex-row lg:flex-col">
         <label
           className="clip-[rect(0,0,0,0)] absolute m-[-1px] h-[1px] w-[1px] overflow-hidden border-0 p-0 whitespace-nowrap [clip-path:inset(50%)]"
-          for="NewsLetterform"
+          htmlFor="NewsLetterform"
         >
           Email
         </label>
@@ -17,8 +17,8 @@ const NewsLetterForm = () => {
           placeholder="Enter your email address"
           aria-required="true"
           autoComplete="email"
-          autocorrect="off"
-          autocapitalize="off"
+          autoCorrect="off"
+          autoCapitalize="off"
           aria-describedby=""
           required
         />
