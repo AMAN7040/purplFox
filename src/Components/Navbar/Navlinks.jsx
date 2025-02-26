@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
 
 const AboutUsComp = ({ handleToggleOpen, isOpen, position }) => {
   return (
@@ -35,10 +36,10 @@ const AboutUsComp = ({ handleToggleOpen, isOpen, position }) => {
         id="about-dropdownList"
       >
         <li className={`${styles.sub_dropdownItem} cursor-pointer px-5 py-3`}>
-          Our story
+          <Link to="/pages/about-us">Our Story</Link>
         </li>
         <li className={`${styles.sub_dropdownItem} cursor-pointer px-5 py-3`}>
-          Our Partners
+          <Link to="/pages/our-partners">Our Partners</Link>
         </li>
       </ul>
     </details>
@@ -49,7 +50,7 @@ const NavItem = ({ handleToggleOpen, isOpen, position }) => {
   return (
     <>
       <li className="cursor-pointer px-4 py-6 font-primary text-primary">
-        Home
+        <Link to="/">Home</Link>
       </li>
       <li className="relative cursor-pointer px-4 py-6 font-primary text-primary">
         <AboutUsComp
