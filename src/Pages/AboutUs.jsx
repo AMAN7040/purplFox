@@ -2,6 +2,7 @@ import React from "react";
 import BreadCrumps from "../Components/BreadCrumps/BreadCrumps";
 import Section_2 from "../Components/AboutUsBodySection/Section_2";
 import Section_3 from "../Components/AboutUsBodySection/Section_3";
+import Section_4 from "../Components/AboutUsBodySection/Section_4";
 
 const AboutUs = () => {
   return (
@@ -12,8 +13,11 @@ const AboutUs = () => {
       <div className="section-2">
         <Section_2 />
       </div>
-      <div>
+      <div className="section-3">
         <Section_3 />
+      </div>
+      <div className="section-4">
+        <Section_4 />
       </div>
     </main>
   );
